@@ -10,13 +10,18 @@ ul {
   list-style: none;
 }
 
+p {
+  text-align: center;
+  color: white;
+  font-size: 45px;
+}
+
 body {
-  /*font-family: sans-serif;*/
-  font-family: 'Orbitron', sans-serif;
   text-align: center;
   font-weight: bold;
   color: white;
-  background: black;
+  background-color: darkblue;
+  background-image: url("../../background-blau.jpg");
 }
 
 .tron-logo {
@@ -31,7 +36,6 @@ body {
 
 figure {
   display: inline-block;
-  /*will need to modify these if the size of the board changes*/
   min-width: 800px;
   min-height: 560px;
   max-width: 850px;
@@ -56,7 +60,6 @@ li {
 h1 {
   color: white;
   font-family: 'Audiowide', cursive;
-  /*font-family: 'Orbitron', sans-serif;*/
   font-size: 30px;
 }
 
@@ -170,4 +173,56 @@ h1#instructions {
   font-family: 'Orbitron', sans-serif;
   color: #FF4500;
   margin-left: 10px;
+}
+
+nav > ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+nav li {
+	margin: 0.5em;
+	padding: 0;
+	font-size: 1.5rem;
+	flex: 1 1 0%;
+}
+
+@media (min-width: 45em) {
+	nav > ul {
+		flex-direction: row;
+	}
+	nav li {
+		flex: 1;
+		font-size: 1em;
+	}
+}
+
+nav a {
+	display: block;
+	padding: 0.4em;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid darkblue;
+	border-radius: 10px;
+	box-shadow: 0 5px 10px white inset;
+	color: gold;
+	background-color: darkblue;
+	transition: all .25s ease-in;
+}
+
+nav li[aria-current] a {
+	background-color: firebrick;
+	color: gold;
+}
+
+nav a:focus,
+nav a:hover,
+nav li[aria-current] a:focus,
+nav li[aria-current] a:hover {
+	color: darkblue;
+	background-color: gold;
 }
